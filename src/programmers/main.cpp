@@ -4,7 +4,8 @@
 #include <cstdio>
 #include <iostream>
 
-
+extern int solution(vector<int> gold_prices);
+extern int solution(vector<int> openA, vector<int> closeB) ;
 
 void call_vvi_solution(){
     string input;
@@ -16,23 +17,24 @@ void call_vvi_solution(){
 
 
 void call_vi_solution(){
-    int n  = 0 ;
-    cin >> n;
-    char a;
-    cin >> a;
-    string lost, reserve;
-    getline(cin, lost);
-    getline(cin,reserve);;
+
+    string input;
+    getline(cin, input);
+    int limit;
+    cin >> limit;
+
     StringParser<int> sparser;
-    vector<int> vi = sparser.vector_parser(lost,',');
-    vector<int> vi2 = sparser.vector_parser(reserve,',');
-    // solution(n,vi,vi2);
+    vector<int> vi = sparser.vector_parser(input,',');
+    
+    //  solution(vi, vi);
 }
 
 int main(){
 
     freopen("/home/joon/sources/algorithm/build/input.txt", "r", stdin);
 
+    
+    // call_vi_solution();
     return 0;
 }
 
