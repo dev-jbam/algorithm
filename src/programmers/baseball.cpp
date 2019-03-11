@@ -37,7 +37,7 @@ baseball	return
 문제에 나온 예와 같습니다.
 
 */
-#if 1
+#if 0
 
 #include <string>
 #include <vector>

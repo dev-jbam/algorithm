@@ -99,8 +99,6 @@ private:
             return stoull(input);
         }
     }
-
-
 };
 
 #endif

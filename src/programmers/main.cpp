@@ -1,11 +1,8 @@
-#if 1
+#if 0
 
 #include "string_to_vector.h"
 #include <cstdio>
 #include <iostream>
-
-extern int solution(vector<int> gold_prices);
-extern int solution(vector<int> openA, vector<int> closeB) ;
 
 void call_vvi_solution(){
     string input;
