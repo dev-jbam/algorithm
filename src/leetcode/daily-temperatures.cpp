@@ -23,18 +23,18 @@ public:
         vector<int> answer(T.size(),0);
         int size = T.size();
 
-        stack<pair<int, int > > p_stk;
+        stack<int> p_stk;
 
         for(int i = 0; i < size; ++i){
-            while( i < size && !p_stk.empty() && p_stk.top().first >= T[i] ){
-                p_stk.push(make_pair(T[i], i));
+            while( i < size && !p_stk.empty() && T[p_stk.top()] >= T[i] ){
+                p_stk.push(i);
                 i++;
             }
-            while( i < size && !p_stk.empty() &&  p_stk.top().first < T[i]){
-                answer[p_stk.top().second] = i - p_stk.top().second;
+            while( i < size && !p_stk.empty() && T[p_stk.top()] < T[i] ){
+                answer[p_stk.top()] = i - p_stk.top();
                 p_stk.pop();
             }
-            p_stk.push(make_pair(T[i],i));
+            p_stk.push(i);
         }
        return answer;
     }

@@ -1,3 +1,4 @@
+#if 0
 /*
 https://www.acmicpc.net/problem/1012
 
@@ -131,7 +132,6 @@ int bugCountBfs(int test){
 }
 
 
-#if 0
 
 int main(void){
 

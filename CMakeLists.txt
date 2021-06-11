@@ -33,6 +33,7 @@ file(GLOB SRC
     "src/**/*.hpp"
     "src/**/*.c"
     "src/**/*.cpp"
+    "src/main.cpp"
 )
 
  include_directories(src)

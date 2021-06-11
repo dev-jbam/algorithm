@@ -44,4 +44,17 @@ private:
     }
 };
 
+int visit_room(int cur, int count, vector<bool> &visited, const vector<vector<int> > &matrix){
+    visited[cur] = true;
+    int max_count = 0;
+    for(int i = 0; i<matrix[cur].size(); ++i){
+        int next = matrix[cur][i];
+        if(visitied[i]){
+            continue;
+        }
+        max_count = max(max_count, visit_room(next, count + 1, visited,  matrix));
+    }
+    return max_count;
+}
+
 #endif
